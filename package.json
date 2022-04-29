@@ -1,9 +1,4 @@
 {
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
-  },
   "private": true,
   "babelMacros": {
     "twin": {
