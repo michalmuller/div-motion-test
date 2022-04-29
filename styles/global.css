@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://use.typekit.net/jfo7xun.css");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: niveau-grotesk, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:hover  {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.translate-center {
+  transform: translateX(-50%);
+}
+
+/* ---------- CUSTOM SCROLLBAR ---------- */
+::-webkit-scrollbar-track {
+  border-radius: 99px;
+  border: solid 4px transparent;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: #F9F8FB;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border-top: solid 2px transparent;
+  border-bottom: solid 2px transparent;
+  border-right: solid 2px transparent;
+  border-left: solid 2px transparent;
+  box-shadow: inset 0 0 8px 10px #BEBBC8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 10px 10px #a3a0ac;
+}
