@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import tw, {styled} from 'twin.macro'
 
 //SECTIONS
-import HomeHero from '../Sections/HomeHero'
+import HomeHero from '../sections/HomeHero'
 import HomeServiceSlider from '../sections/HomeServiceSlider'
 import HomeTestimonial from '../sections/HomeTestimonial'
 import HomeValues from '../sections/HomeValues'
