@@ -22,7 +22,7 @@ export default function HomeGetConsultation() {
             </div>
           </div>
           <div css={tw`w-5/12`}>
-            <Title after={true}  tag="h2">
+            <Title tag="h2">
               <TitleSpan before="g" styles={tw`after:left-[-22px] after:bottom-[6px] after:w-[24px] after:h-[22px]` }>Get </TitleSpan>
                a Free Consultation About Your Digital Transformation 
             </Title>

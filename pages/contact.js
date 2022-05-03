@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
 
+import ContactHero from '../sections/ContactHero'
+import ContactFAQ from '../sections/ContactFAQ'
+import ContactCTA from '../sections/ContactCTA'
+
 const siteTitle = 'Contact | Div Motion'
 const siteDescription = 'Site description for SEO'
-
 
 export default function Contact() {
   return (
@@ -14,9 +17,9 @@ export default function Contact() {
         <meta property="og:description" content={siteDescription} />
         <meta name="description" content={siteDescription} />
       </Head>
-      <section >
-        Contact
-      </section>
+      <ContactHero/>
+      <ContactFAQ/>
+      <ContactCTA/>
     </Layout>
   )
 }

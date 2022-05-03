@@ -10,6 +10,7 @@ const TitleWrapper = styled.div`
   }
   h2{
     ${({ theme }) => theme == 'white' && tw`text-white`}
+    ${({ align }) => align == 'center' && tw`text-center`}
     ${tw`text-5xl leading-tight font-normal`}
   }
   h3{

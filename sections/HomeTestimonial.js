@@ -30,10 +30,11 @@ export default function HomeTestimonial() {
             <div css={tw`absolute top-2 -left-16`}>
               <Image src={quotes}  alt="todo" />
             </div>
-            <p css={tw`text-white text-xl font-light italic border-b pb-6 border-white/10`}>
+            <p css={tw`text-white text-xl font-light italic pb-6 relative`}>
               DIV Motion has been an invaluable part of our SaaS development bringing our custom components 
               to life. Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet adipiscing elit. 
               Fusce ultricies odio quis libero egestas aliquet. Nulla consequat pulvinar turpis. 
+              <div css={tw`absolute w-full h-px bottom-0 bg-gradient-to-r from-gray-50/5 via-gray-50/20 to-gray-50/5`}/>
             </p>
             <div css={tw`pt-6 flex items-center`}>
               <Image src={avatar} css={tw`rounded-full`} alt="todo" height="48"  width="48"/>

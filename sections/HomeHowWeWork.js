@@ -7,7 +7,7 @@ import TitleSpan from '../atoms/TitleSpan'
 // Images
 import illustration from '../public/images/illustration-how-we-work.svg';
 
-const Wrapper = tw.div`px-5 py-32`
+const Wrapper = tw.div`px-5 pb-32 pt-20`
 const Container = tw.div`container mx-auto text-blue-900 ` 
 
 export default function HomeHowWeWork() {

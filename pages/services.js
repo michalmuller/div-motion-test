@@ -4,6 +4,9 @@ import Layout from '../components/Layout'
 //SECTIONS
 import ServicesHero from '../sections/ServicesHero'
 import ServicesIntroduction from '../sections/ServicesIntroduction'
+import ServicesList from '../sections/ServicesList'
+import ServicesMain from '../sections/ServicesMain'
+import ServicesCTA from '../sections/ServicesCTA'
 
 const siteTitle = 'Services | Div Motion'
 const siteDescription = 'Site description for SEO'
@@ -20,6 +23,9 @@ export default function Services() {
       </Head>
       <ServicesHero/>
       <ServicesIntroduction/>
+      <ServicesList/>
+      <ServicesMain/>
+      <ServicesCTA />
     </Layout>
   )
 }

@@ -15,19 +15,47 @@ const Content = styled.div`
     ${tw`text-4xl leading-snug pb-6 font-normal`}
   }
   h2{
-    ${tw`text-3xl leading-snug pb-6 font-normal`}
+    ${tw`text-3xl leading-snug pb-5 pt-11 font-normal`}
   }
   h3{
-    
+    ${tw`text-2xl leading-snug pb-5 pt-11 font-normal`}
   }
   blockquote {
-    ${tw`bg-gray-50`}
+    ${tw`italic mt-6 mb-12 pt-9 pb-4 relative px-10`}
+    &:before {
+      ${tw`absolute left-0 top-0 w-full h-px block content-[' '] bg-gradient-to-r from-gray-200/30 via-gray-200 to-gray-200/10`}
+    }
+    &:after {
+      ${tw`absolute left-0 bottom-0 w-full h-px block content-[' '] bg-gradient-to-r from-gray-200/30 via-gray-200 to-gray-200/10`}
+    }
+    p{
+      ${tw`relative`}
+      &:after{
+        ${tw`absolute left-0 top-0 w-[28px] h-[17px] block content-[' '] -ml-10 -mt-3`}
+        background-image: url('../images/blockquote.svg');
+      }
+    }
   }
   p{
-    ${tw`text-xl`}
+    ${tw`font-light text-xl pb-6`}
   }
   ul{
-    
+    ${tw`font-normal`}
+  }
+  li{
+    ${tw`pb-3 relative flex items-center text-xl font-normal`}
+  }
+
+  li:before {
+    ${tw`mr-3 w-3.5 h-[18px] block content-[' '] `}
+    background-image: url('../images/li-slash.svg');
+  }
+
+  a{
+    ${tw`text-brand-purple font-medium hover:underline`}
+  }
+  img{
+    ${tw`w-full h-full pt-6 pb-12`}
   }
 `
 

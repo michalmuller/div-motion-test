@@ -97,8 +97,8 @@ export default function HomeHowWeStart() {
               >
                 <BoxProgressBar isOpen={i.id == active}/>
                 <BoxProgressBarOverlay isOpen={i.id == active}/>
-                <h1 css={[tw`font-medium mb-3 text-opacity-50 duration-300 flex justify-between items-center`, i.id != active && tw`text-blue-900/40 group-hover:text-blue-900/70`]}>{i.title}
-                <span css={tw`transition-all duration-500 delay-100`} className={i.id == active && 'rotate-180'}><IconArrowDown/></span>
+                <h1 css={[tw`font-medium mb-3 text-opacity-50 duration-300 flex justify-between items-center`, i.id != active && tw`text-blue-900/60 group-hover:text-blue-900/80`]}>{i.title}
+                <span css={tw`transition-all duration-300 delay-100`} className={i.id == active && 'rotate-180'}><IconArrowDown/></span>
                 </h1>
                 <ul>
                   {i.content.map((c,i)=>{

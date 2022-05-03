@@ -25,9 +25,9 @@ export default function HomeValues() {
               turned into software products but also find themselves consulted and guided on the journey so they can continue developing 
               or supporting their products independently in the future. 
               <br/><br/>
-              We have a pretty good grip on what leads to successful digital projects. Our values define the frame in which we operate; 
+              We have a pretty good grip on what leads to successful digital projects. Our values define the frame in which we operate;{" "}
               <Link href="/about">
-                <a css={tw`text-brand-purple cursor-pointer font-medium hover:underline`}> Read more &rsaquo;</a>
+                <a css={tw`text-brand-purple cursor-pointer font-medium hover:underline`}>Read more &rsaquo;</a>
               </Link>
             </p>
           </div>
