@@ -18,7 +18,7 @@ export default function HomeGetConsultation() {
         <div css={tw`flex w-full justify-between`}>
           <div css={tw`w-6/12 relative`}>
             <div css={tw`absolute w-max right-0 bottom-0`}>
-              <Image  src={HomeConsultation} alt="todo"/>
+              <Image loading="eager" src={HomeConsultation} alt="todo" quality="85"/>
             </div>
           </div>
           <div css={tw`w-5/12`}>

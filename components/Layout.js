@@ -46,6 +46,7 @@ export default function Layout({ children, dark }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/jfo7xun.css"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:image"
           content="meta image"

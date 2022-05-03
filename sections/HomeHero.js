@@ -1,5 +1,4 @@
 import tw from 'twin.macro'
-import Image from 'next/image'
 import Link from 'next/link'
 
 // Atoms, Components  & Sections
@@ -29,7 +28,7 @@ export default function HeroHome() {
               </a>
             </Link>
           </div>
-          <Image src={heroHome} alt="todo"/>
+          <img src={heroHome.src} alt="todo"/>
         </div>
       </Container>
     </Wrapper>

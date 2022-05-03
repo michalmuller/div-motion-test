@@ -1,4 +1,4 @@
-import tw, { styled, css } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import React, { useState, useEffect, useRef } from 'react';
 
 // Atoms, Components  & Sections
@@ -7,7 +7,7 @@ import TitleSpan from '../atoms/TitleSpan'
 
 // Images
 import IconArrowDown from '../atoms/IconArrowDown'
-import iconStar from '../public/images/icon-star.svg';
+import iconSlash from '../public/images/li-slash.svg';
 
 const Wrapper = tw.div`px-5 pt-32 pb-28`
 const Container = tw.div`container mx-auto text-blue-900 min-h-[540px]` 
@@ -103,8 +103,8 @@ export default function HomeHowWeStart() {
                 <ul>
                   {i.content.map((c,i)=>{
                     return(
-                      <li key={i} css={tw`py-2 flex items-center ml-5`}> 
-                        <img src={iconStar.src} css={tw` mr-3 h-4 w-4`} alt="todo"/> 
+                      <li key={i} css={tw`py-2 flex items-center ml-3`}> 
+                        <img src={iconSlash.src} css={tw`mr-3 w-3.5 h-[18px]`} alt="todo"/> 
                         {c}
                       </li>
                     ) 

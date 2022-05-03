@@ -34,7 +34,7 @@ export default function HomeTestimonial() {
               DIV Motion has been an invaluable part of our SaaS development bringing our custom components 
               to life. Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet adipiscing elit. 
               Fusce ultricies odio quis libero egestas aliquet. Nulla consequat pulvinar turpis. 
-              <div css={tw`absolute w-full h-px bottom-0 bg-gradient-to-r from-gray-50/5 via-gray-50/20 to-gray-50/5`}/>
+              <span css={tw`absolute left-0 w-full h-px bottom-0 bg-gradient-to-r from-gray-50/5 via-gray-50/20 to-gray-50/5`}/>
             </p>
             <div css={tw`pt-6 flex items-center`}>
               <Image src={avatar} css={tw`rounded-full`} alt="todo" height="48"  width="48"/>
