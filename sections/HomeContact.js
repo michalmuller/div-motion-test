@@ -18,12 +18,12 @@ export default function HomeContact() {
   return (    
     <Wrapper>
       <Container className='container'>
-        <div css={tw`flex justify-between items-start`}>
-          <div css={tw`w-6/12`}>
+        <div css={tw`flex flex-col sm:flex-row justify-between items-start`}>
+          <div css={tw`w-full sm:w-6/12`}>
             <Title after={true}  tag="h2">
-              Let's <TitleSpan after="k" styles={tw`after:right-[-28px] after:bottom-[15px] after:w-[26px] after:h-[10px]` }> talk</TitleSpan>
+              Let's <TitleSpan after="k" styles={tw`after:right-[-28px] after:bottom-[10px] sm:after:bottom-[15px] after:w-[26px] after:h-[10px]` }> talk</TitleSpan>
             </Title>
-            <p css={tw`xl:text-lg 2xl:text-xl text-gray-700 mt-6 xl:leading-relaxed 2xl:leading-relaxed font-light`}>
+            <p css={tw`xl:text-lg 2xl:text-xl text-gray-700 mt-3 sm:mt-6 xl:leading-relaxed 2xl:leading-relaxed font-light`}>
               We are always open to new project inquiries, consultation or possible collaboration. Feel free to reach out with any question.
             </p>
             <div css={tw`mt-6`}>
@@ -40,7 +40,7 @@ export default function HomeContact() {
               })}
             </div>
           </div>
-          <div css={tw`w-5/12`}>
+          <div css={tw`w-full sm:w-5/12 mt-12 sm:mt-0`}>
             <ContactForm/>
           </div>
         </div>

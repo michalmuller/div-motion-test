@@ -86,22 +86,22 @@ export default function Layout({ children, dark }) {
       <main>{children}</main>
       <Wrapper dark={true}>
         <Container className='container'>
-          <div css={tw`flex justify-between py-16`}>
-            <div css={tw`w-1/3 pr-2`}>
+          <div css={tw`flex flex-col sm:flex-row justify-between pt-12 pb-8 sm:py-16`}>
+            <div css={tw`w-full sm:w-1/3 pr-2`}>
               <Link href="/">
                 <a css={tw`flex text-gray-100 cursor-pointer w-40`}>                
                   <Logo />
                 </a>
               </Link>
-              <p css={tw`2xl:text-lg text-gray-500 mt-3 leading-relaxed font-light`}>div motion is a digital agency helping companies with agile development services and IT consulting. </p>
+              <p css={tw`2xl:text-lg text-gray-500 mt-3 leading-relaxed font-light tracking-tight sm:tracking-normal`}>div motion is a digital agency helping companies with agile development services and IT consulting. </p>
               <Link href="/">
-                <a css={tw`flex text-gray-500/40 hover:text-gray-500/60 cursor-pointer mt-6`}>                
+                <a css={tw`text-sm sm:text-base flex text-gray-500/40 hover:text-gray-500/60 cursor-pointer mt-3 sm:mt-6`}>                
                   Privacy Policy
                 </a>
               </Link>
             </div>
-            <div css={tw`w-5/12 flex`}>
-              <div css={tw`w-7/12 flex-row`}>
+            <div css={tw`w-full sm:w-5/12 flex mt-12 sm:mt-0`}>
+              <div css={tw`w-8/12 sm:w-7/12 flex-row`}>
                 <p css={tw`text-gray-100 font-normal tracking-wide text-xl pb-4`}>Useful Links</p>
                 <Link href="/services">
                   <a css={tw`text-gray-500 hover:text-gray-300 text-lg mb-2 block cursor-pointer`}>Our Services</a>
@@ -113,7 +113,7 @@ export default function Layout({ children, dark }) {
                   <a css={tw`text-gray-500 hover:text-gray-300 text-lg mb-2 block cursor-pointer`}>Contact</a>
                 </Link>
               </div>
-              <div css={tw`w-5/12 flex-row`}>
+              <div css={tw`w-4/12 sm:w-5/12 flex-row`}>
                 <p css={tw`text-gray-100 font-normal tracking-wide text-xl pb-4`}>Follow Us</p>
                 <div css={tw`flex`}>
                   <div css={tw`opacity-80 hover:opacity-100 transition-all  mr-3`}>

@@ -9,9 +9,10 @@ const TitleWrapper = styled.div`
     ${({ regular }) => regular ? tw`font-normal` : `font-light`}
   }
   h2{
-    ${({ theme }) => theme == 'white' && tw`text-white`}
+    ${({ theme }) => theme == 'white' && tw`text-white text-center sm:text-left`}
     ${({ align }) => align == 'center' && tw`text-center`}
-    ${tw`xl:text-4.5xl 2xl:text-5xl xl:leading-snug 2xl:leading-snug font-normal`}
+    ${({ align }) => align == 'sm-center' && tw`text-center sm:text-left`}
+    ${tw`text-3xl xl:text-4.5xl 2xl:text-5xl xl:leading-snug 2xl:leading-snug font-normal`}
   }
   h3{
     ${tw`text-4xl font-normal`}

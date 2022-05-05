@@ -8,7 +8,7 @@ import Image from 'next/image'
 import tw, { styled } from 'twin.macro'
 import BlogPost from '../../components/blog-post'
 
-const Container = tw.div`container mx-auto`
+const Container = tw.div`container mx-auto overflow-hidden`
 
 const Content = styled.div`
   ${tw`text-blue-900 `},
@@ -96,16 +96,17 @@ export default function Post({ postData, allPostsData }) {
             <Image src={postData.image} alt="todo" width="1240px" height="456px" />
           </div>
 
-          <div css={tw`flex self-start h-5/6 w-11/12 pb-28`}>
-            <div css={tw`sticky top-0 w-full h-11`}>
-                <Link href="/" >
-                  <a>← Back to home</a>
-                </Link>
+          <div css={tw`flex w-11/12 pb-28 ml-0`}>
+            <div css={tw`container sticky top-0 w-full h-11`}>
+              <Link href="/posts" >
+                <a>← Back to home</a>
+              </Link>
             </div>
             <Content>
               <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </Content> 
           </div>
+
         </Container>
 
         {allPostsData[postData.id].related != undefined &&
@@ -128,7 +129,6 @@ export default function Post({ postData, allPostsData }) {
             </Container>    
           </div>
         }
-        {console.log(allPostsData)}
     </Layout>
   )
 }

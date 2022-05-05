@@ -38,8 +38,8 @@ export default function Posts({ allPostsData }) {
           {/* SPACE FOR THE FIRST/LATEST BLOG POST */}
           <div css={tw`mt-11 flex items-center`}>
           <Link href={`/posts/${allPostsData[0].name}`}>
-            <div css={tw`w-1/2 h-80 overflow-hidden hover:cursor-pointer`}>
-              <Image src={allPostsData[0].image} alt="todo" width="620px" height="340px" />
+            <div css={tw`w-1/2 h-80 overflow-hidden hover:cursor-pointer hover:scale-105`}>
+              <Image src={allPostsData[0].image} className="scale105" alt="todo" width="620px" height="340px" />              
             </div>
           </Link> 
             <div css={tw`w-1/2 text-blue-900 ml-12`}>

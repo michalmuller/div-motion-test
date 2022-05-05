@@ -9,12 +9,12 @@ import TitleSpan from '../atoms/TitleSpan'
 import IconArrowDown from '../atoms/IconArrowDown'
 import iconSlash from '../public/images/li-slash.svg';
 
-const Wrapper = tw.div`px-5 pt-32 pb-28`
+const Wrapper = tw.div`px-5 pt-14 sm:pt-32 pb-12 sm:pb-28`
 const Container = tw.div`container mx-auto text-blue-900 min-h-[540px]` 
 
 const Box = styled.div(({ isOpen }) => [
-  tw`bg-gray-50 py-7 px-11 relative w-full mb-3 text-xl overflow-hidden transition-all duration-500`,
-  isOpen ? tw`max-h-64 cursor-default` : tw` max-h-20  cursor-pointer`,
+  tw`bg-gray-50 py-7 px-6 sm:px-11 relative w-full mb-3 text-lg sm:text-xl overflow-hidden transition-all duration-500`,
+  isOpen ? tw` max-h-80 sm:max-h-64 cursor-default` : tw` max-h-20  cursor-pointer`,
 ])
 
 const BoxProgressBar = styled.div(({isOpen})=>[
@@ -85,7 +85,7 @@ export default function HomeHowWeStart() {
     <Wrapper>
       <Container className='container'>
         <Title after={true} tag="h2">
-          How We <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[15px] after:w-[21px] after:h-[12px]` }> Start</TitleSpan>
+          How We <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[11px] sm:after:bottom-[15px] after:w-[21px] after:h-[12px]` }> Start</TitleSpan>
         </Title>
         <div ref={myRef} css={tw`mt-6`}>
           {items.map(i=>{
@@ -103,8 +103,8 @@ export default function HomeHowWeStart() {
                 <ul>
                   {i.content.map((c,i)=>{
                     return(
-                      <li key={i} css={tw`text-lg 2xl:text-xl py-2 flex items-center ml-3`}> 
-                        <img src={iconSlash.src} css={tw`mr-3 w-3.5 h-[18px]`} alt="todo"/> 
+                      <li key={i} css={tw`text-base xl:text-lg 2xl:text-xl py-2 flex sm:items-center -ml-1 sm:ml-3 tracking-tight sm:tracking-normal`}> 
+                        <img src={iconSlash.src} css={tw`mt-1.5 sm:mt-0 mr-2 sm:mr-3 w-2.5 sm:w-3.5 h-3 sm:h-[18px]`} alt="todo"/> 
                         {c}
                       </li>
                     ) 
