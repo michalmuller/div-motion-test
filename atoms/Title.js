@@ -5,7 +5,7 @@ const TitleWrapper = styled.div`
   ${({ theme }) => theme == 'white' && tw`text-gray-100`}
   ${({ align }) => align == 'center' && tw`text-center`}
   h1{
-    ${tw`xl:text-5xl 2xl:text-6xl xl:leading-snug 2xl:leading-snug`}
+    ${tw`text-4xl xl:text-5xl 2xl:text-6xl xl:leading-snug 2xl:leading-snug`}
     ${({ regular }) => regular ? tw`font-normal` : `font-light`}
   }
   h2{

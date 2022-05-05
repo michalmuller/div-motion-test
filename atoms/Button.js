@@ -1,9 +1,9 @@
 import tw, { styled, css } from 'twin.macro'
 
-const Button = styled.button(({ isPrimary, isSecondary }) => [
+const Button = styled.div(({ isPrimary, isSecondary }) => [
 
   // The common button styles added with the tw import
-  tw`2xl:text-lg px-8 py-2.5 font-normal tracking-wide rounded-full outline-none focus:outline-none`,
+  tw`2xl:text-lg px-8 py-2.5 font-normal tracking-wide rounded-full outline-none inline-block cursor-pointer focus:outline-none`,
   tw`transition-all ease-in-out duration-500`,
   
 

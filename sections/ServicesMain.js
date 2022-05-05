@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import tw, { styled } from 'twin.macro'
+import Image from 'next/image'
 
 // Atoms, Components  & Sections
 import Title from '../atoms/Title'
@@ -22,6 +23,7 @@ export default function ServicesMain() {
     {
       title: 'Web Application Development',
       text: 'We implement different type of applications such as Custom Web Applications, Large scale systems, Dynamic Applications, Content Rich Systems.',
+      serviceImg: 'agile-dev',
       items: [
         {
           id: 1,
@@ -43,6 +45,7 @@ export default function ServicesMain() {
     {
       title: 'App Modernization',
       text: 'Digitally transforming legacy systems to modern Applications using latest technologies to improve usability, productivity and security.',
+      serviceImg: 'app-modernization',
       items: [
         {
           id: 4,
@@ -59,6 +62,7 @@ export default function ServicesMain() {
     {
       title: 'Team Extension',
       text: 'You get access to pool of carefully pre-selected software engineers capable of working from start-up companies to big enterprise companies.',
+      serviceImg: 'team-extension',
       items: [
         {
           id: 6,
@@ -120,8 +124,11 @@ export default function ServicesMain() {
                   })}
                 </div>
               </div>
-              <div css={tw`w-5/12`}>
-                <img src={serviceImg.src} alt="todo"/>            
+              <div css={tw`w-5/12 relative`}>
+                <div css={tw`w-full h-full relative`}>
+                  <img src={`/images/services-${s.serviceImg}.png`} alt="todo" />
+                </div>
+                {/* <img src={serviceImg.src} alt="todo"/>             */}
               </div>
             </div>
           )

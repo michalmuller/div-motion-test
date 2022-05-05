@@ -57,7 +57,7 @@ export default function ContactForm() {
       </div>   
       <div css={tw`flex items-center justify-between pt-6`}>
 
-      <button css={tw`block`} type="submit" name="SendMessage">                
+      <button css={tw`block outline-none focus:outline-none`} type="submit" name="SendMessage">                
         <Button isPrimary>Send Message</Button>
       </button>
       </div>

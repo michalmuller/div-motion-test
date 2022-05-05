@@ -14,10 +14,10 @@ const Wrapper = styled.div(({ dark }) => [
 
 const Container = tw.div`container mx-auto`
 
-const Navigation = tw.div`flex justify-between pt-12` 
+const Navigation = tw.div`flex justify-between py-6 sm:pb-0 sm:pt-12` 
 
 const Links = styled.div(({ dark }) => [
-  tw`cursor-pointer text-gray-700`,
+  tw`hidden sm:block cursor-pointer text-gray-700`,
   dark && tw`text-gray-500`, 
 ])
 

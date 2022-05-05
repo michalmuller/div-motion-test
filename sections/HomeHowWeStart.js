@@ -85,7 +85,7 @@ export default function HomeHowWeStart() {
     <Wrapper>
       <Container className='container'>
         <Title after={true} tag="h2">
-          How We <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[14px] after:w-[21px] after:h-[12px]` }> Start</TitleSpan>
+          How We <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[15px] after:w-[21px] after:h-[12px]` }> Start</TitleSpan>
         </Title>
         <div ref={myRef} css={tw`mt-6`}>
           {items.map(i=>{

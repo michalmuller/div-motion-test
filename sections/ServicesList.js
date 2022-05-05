@@ -1,7 +1,5 @@
 import tw from 'twin.macro'
-
-// Images
-import iconStar from '../public/images/icon-star.svg';
+import Image from 'next/image'
 
 const Wrapper = tw.div`px-5 py-20 bg-gray-50`
 const Container = tw.div`container mx-auto text-blue-900` 
@@ -10,15 +8,18 @@ export default function ServicesList() {
   const items = [
     {
       title: 'Application Development',
-      content: ['Microservices', 'API Development', 'Application Modernization']
+      content: ['Microservices', 'API Development', 'Application Modernization'],
+      icon: 'app'
     },
     {
       title: 'Agile Development ',
-      content: ['Scrum', 'Kanban', 'Scrumban']
+      content: ['Scrum', 'Kanban', 'Scrumban'],
+      icon: 'agile'
     },
     {
       title: 'System Integration',
-      content: ['Webhooks', 'Cloud Solution', 'Enterprise Application']
+      content: ['Webhooks', 'Cloud Solution', 'Enterprise Application'],
+      icon: 'system'
     },
   ]
   return (    
@@ -28,7 +29,7 @@ export default function ServicesList() {
           {items.map((item, i)=>{
             return (
               <div key={i} css={tw`flex flex-col items-center`}>
-                <img src={iconStar.src} alt="todo"/>
+                <Image src={`/images/icon-${item.icon}.svg`} height="44px" width="44px" alt="todo" />
                 <p css={tw`font-bold text-xl uppercase pt-8`}>{item.title}</p>
                 {item.content.map((c,i)=>{
                   return <p key={i} css={tw`xl:text-lg 2xl:text-xl pt-2 text-gray-700 2xl:leading-relaxed`}>{c}</p>
