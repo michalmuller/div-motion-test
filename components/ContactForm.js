@@ -20,19 +20,24 @@ export default function ContactForm() {
   }
 
   const handleSubmit = (event) =>{
+    let data = {
+      name: name,
+      email:email,
+      message: message
+    }
+    console.log(data)
     event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": event.target.getAttribute("name"),
-        ...name,
+        ...data,
       }),
     })
-      .then(() => navigate("/thank-you/"))
+      .then(() => console.log('success'))
       .catch((error) => alert(error));
   }
-
   
   return ( 
     <form name="contact" method="POST" data-netlify="true" onSubmit={e => handleSubmit(e)}>
