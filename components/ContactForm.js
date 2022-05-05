@@ -10,32 +10,27 @@ export default function ContactForm() {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const encode = (data) => {
+  const encode = (data)=> {
     return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
   }
 
   const handleSubmit = (event) =>{
-    event.preventDefault()
-    const details = {
-      Name: name,
-      Email: email,
-      Message: message,
-    }
-
+    event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...details })
-    }).then(function () {
-        setName("")
-        setEmail("")
-        setMessage("")
-      })
-      .catch(function (error) {
-        alert(error)
-      })
+      body: encode({
+        "form-name": event.target.getAttribute("name"),
+        ...name,
+      }),
+    })
+      .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
   }
 
   
@@ -60,7 +55,6 @@ export default function ContactForm() {
       <button css={tw`block`} type="submit" name="SendMessage">                
         <Button isPrimary>Send Message</Button>
       </button>
-      {submitText && <p css={tw`text-gray-700/70 ml-6`}>{submitText}</p>}
       </div>
     </form>
   )
