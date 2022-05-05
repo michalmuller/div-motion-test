@@ -18,19 +18,19 @@ const Container = tw.div`container mx-auto`
 export default function HomeTestimonial() {
   return (    
     <Wrapper>
-      <Container>       
-        <div css={tw`flex items-center justify-between py-28`}>
-          <div css={tw`w-4/12 `}>
+      <Container className='container'>       
+        <div css={tw`flex items-center justify-between py-20 2xl:py-28`}>
+          <div css={tw`w-4/12 xl:pr-4 2xl:pr-0 `}>
             <Title tag="h2" theme="white">
               Kind Words from Our Dear Clients
             </Title>
           </div>
-          <img src={testimonialBg.src} css={tw`opacity-[0.07] absolute top-0 left-0 h-full`}  alt="div motion background" />
+          <img src={testimonialBg.src} css={tw`opacity-[0.07]  absolute top-0 left-0 h-full xl:-ml-20 2xl:-ml-0`}  alt="div motion background" />
           <div css={tw`w-7/12 relative`}>
             <div css={tw`absolute top-2 -left-16`}>
               <Image src={quotes}  alt="todo" />
             </div>
-            <p css={tw`text-white text-xl font-light italic pb-6 relative`}>
+            <p css={tw`text-white xl:text-lg 2xl:text-xl font-light italic pb-6 relative`}>
               DIV Motion has been an invaluable part of our SaaS development bringing our custom components 
               to life. Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet adipiscing elit. 
               Fusce ultricies odio quis libero egestas aliquet. Nulla consequat pulvinar turpis. 

@@ -64,7 +64,7 @@ export default function ContactFAQ() {
   };
   return (    
     <Wrapper>
-      <Container>
+      <Container className='container'>
         <div css={tw`flex justify-between items-start`}>
           <div css={tw`w-7/12`}>
             <Title after={true} tag="h2">Frequently Asked

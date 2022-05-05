@@ -11,6 +11,7 @@ body {
   font-style: normal;
   font-weight: 300;
   overflow-x: hidden;
+  zoom: 1.0;
 }
 
 * {
@@ -56,4 +57,10 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   box-shadow: inset 0 0 10px 10px #a3a0ac;
+}
+
+@media only screen and (min-width: 1560px) {
+  .container {
+    max-width: 1240px !important;
+  }
 }

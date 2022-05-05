@@ -7,7 +7,7 @@ const Container = tw.div`container mx-auto text-blue-900`
 export default function AboutMetrics() {
   return (    
     <Wrapper>
-      <Container>
+      <Container className='container'>
         <div css={tw`grid sm:grid-cols-2 lg:grid-cols-4 gap-y-14 justify-items-center`}>
           <div css={tw`flex flex-col items-center`}>
             <Title tag="h2" theme="black">15+</Title>

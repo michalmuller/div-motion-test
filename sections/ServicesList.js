@@ -9,33 +9,29 @@ const Container = tw.div`container mx-auto text-blue-900`
 export default function ServicesList() {
   const items = [
     {
-      title: 'Agile development',
-      content: ['Scrum', 'Kanban', 'Lean UX']
+      title: 'Application Development',
+      content: ['Microservices', 'API Development', 'Application Modernization']
     },
     {
-      title: 'API Management',
-      content: ['MicroServices', 'Lifecycle management', 'API Gateway']
-    },
-    {
-      title: 'Agile development',
-      content: ['Scrum', 'Kanban', 'Lean UX']
+      title: 'Agile Development ',
+      content: ['Scrum', 'Kanban', 'Scrumban']
     },
     {
       title: 'System Integration',
-      content: ['REST API', 'Webhooks', 'Cloud']
+      content: ['Webhooks', 'Cloud Solution', 'Enterprise Application']
     },
   ]
   return (    
     <Wrapper>
-      <Container>
-        <div css={tw`grid sm:grid-cols-2 lg:grid-cols-4 gap-y-14 justify-items-center`}>
+      <Container className='container'>
+        <div css={tw`grid sm:grid-cols-2 lg:grid-cols-3 gap-y-14 justify-items-center`}>
           {items.map((item, i)=>{
             return (
               <div key={i} css={tw`flex flex-col items-center`}>
                 <img src={iconStar.src} alt="todo"/>
                 <p css={tw`font-bold text-xl uppercase pt-8`}>{item.title}</p>
                 {item.content.map((c,i)=>{
-                  return <p key={i} css={tw`text-lg pt-2`}>{c}</p>
+                  return <p key={i} css={tw`xl:text-lg 2xl:text-xl pt-2 text-gray-700 2xl:leading-relaxed`}>{c}</p>
                 })}
               </div>
             )

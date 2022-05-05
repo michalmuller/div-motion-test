@@ -1,7 +1,7 @@
 import tw, {styled, css} from 'twin.macro'
 
 const Span = styled.span`
-${tw`relative`}
+${tw`relative inline-block`}
 &:after {
   ${tw`absolute content-['']`}
 }

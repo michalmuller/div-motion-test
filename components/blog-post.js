@@ -3,17 +3,20 @@ import Image from 'next/image'
 import tw from 'twin.macro'
 import Title from '../atoms/Title'
 
-export default function BlogPost( {id, image, label, title} ) {
+export default function BlogPost( {id, image, label, title, name} ) {
   return(
-    <Link href={`/posts/${id}`}>
-        <div css={tw`hover:cursor-pointer`}>           
-          <div css={tw`w-full h-52 relative`}>
-            <Image 
-              className="hover:scale-105"
-              src={image}
-              alt="todo"
-              layout='fill'/>
-          </div> 
+    <Link href={`/posts/${name}`}>
+        <div css={tw`hover:cursor-pointer`}> 
+
+          <div css={tw`relative h-52`}>
+            <div css={tw`hover:scale-105`}>
+              <Image
+                src={image}
+                alt="todo"
+                layout='fill'/>
+            </div>
+          </div>
+
           <p css={tw`text-brand-turquoise uppercase font-bold pb-3 pt-6`}>{label}</p>
           <Title tag="h5" theme="black">{title}</Title> 
         </div>  

@@ -16,7 +16,7 @@ const Container = tw.div`container mx-auto text-white`
 export default function ContactHero() {
   return (    
     <Wrapper>
-      <Container>        
+      <Container className='container'>        
         <div css={tw`flex justify-between pt-48`}>
           <div css={tw`w-5/12 pb-44`}>
             <Title tag="h1" regular>

@@ -83,9 +83,9 @@ export default function HomeHowWeStart() {
 
   return (    
     <Wrapper>
-      <Container>
+      <Container className='container'>
         <Title after={true} tag="h2">
-          How We <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[9px] after:w-[21px] after:h-[12px]` }> Start</TitleSpan>
+          How We <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[14px] after:w-[21px] after:h-[12px]` }> Start</TitleSpan>
         </Title>
         <div ref={myRef} css={tw`mt-6`}>
           {items.map(i=>{
@@ -103,7 +103,7 @@ export default function HomeHowWeStart() {
                 <ul>
                   {i.content.map((c,i)=>{
                     return(
-                      <li key={i} css={tw`py-2 flex items-center ml-3`}> 
+                      <li key={i} css={tw`text-lg 2xl:text-xl py-2 flex items-center ml-3`}> 
                         <img src={iconSlash.src} css={tw`mr-3 w-3.5 h-[18px]`} alt="todo"/> 
                         {c}
                       </li>

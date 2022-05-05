@@ -13,7 +13,7 @@ const Container = tw.div`container flex justify-center mx-auto text-white py-32 
 export default function ContactCTA() {
   return (    
     <Wrapper>
-      <Container>        
+      <Container className='container'>        
         <div css={tw`w-full flex flex-col items-center max-w-xl`}>
           <Title tag="h2" align="center">
             <TitleSpan before="g" styles={tw`after:left-[-22px] after:bottom-[6px] after:w-[24px] after:h-[22px]` }>Get </TitleSpan>

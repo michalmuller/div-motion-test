@@ -1,8 +1,14 @@
 ---
+id: 2
+name: "test"
 image: "/images/agile_development.png"
 label: "agile development"
 title: "When to Use Static Generation v.s. Server-side Rendering"
+summary: "Short Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 date: "2020-01-02"
+related:
+    - 0
+    - 1
 ---
 
 # This is a Heading 1 in a blog post

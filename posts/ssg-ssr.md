@@ -1,8 +1,12 @@
 ---
+id: 1
+name: "ssg-ssr"
 image: "/images/security.png"
 label: "security"
 title: "When to Use Static Generation v.s. Server-side Rendering"
+summary: "Short Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 date: "2020-01-02"
+related:
 ---
 
 # This is a Heading 1 in a blog post

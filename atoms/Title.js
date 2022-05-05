@@ -5,13 +5,13 @@ const TitleWrapper = styled.div`
   ${({ theme }) => theme == 'white' && tw`text-gray-100`}
   ${({ align }) => align == 'center' && tw`text-center`}
   h1{
-    ${tw`text-6xl leading-snug`}
+    ${tw`xl:text-5xl 2xl:text-6xl xl:leading-snug 2xl:leading-snug`}
     ${({ regular }) => regular ? tw`font-normal` : `font-light`}
   }
   h2{
     ${({ theme }) => theme == 'white' && tw`text-white`}
     ${({ align }) => align == 'center' && tw`text-center`}
-    ${tw`text-5xl leading-tight font-normal`}
+    ${tw`xl:text-4.5xl 2xl:text-5xl xl:leading-snug 2xl:leading-snug font-normal`}
   }
   h3{
     ${tw`text-4xl font-normal`}

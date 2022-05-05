@@ -17,16 +17,16 @@ const Container = tw.div`container mx-auto text-blue-900 `
 export default function ServicesIntroduction() {
   return (    
     <Wrapper>
-      <Container>
+      <Container className='container'>
         <div css={tw`flex justify-between items-center`}>
           <div css={tw`w-6/12`}>
             <Title after={true}  tag="h2">
-              Modernize Your Business & Save Money at the Same
-              <TitleSpan after="e" styles={tw`after:right-[-22px] after:top-[10px] after:w-[23px] after:h-[24px]` }>
-                Time
+              Unlock Your Digital {' '}
+              <TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[15px] after:w-[21px] after:h-[12px]` }>
+                Potential
               </TitleSpan>
             </Title>
-            <p css={tw`text-xl text-gray-700 mt-6 leading-relaxed font-light`}>
+            <p css={tw`xl:text-lg 2xl:text-xl text-gray-700 mt-6 xl:leading-relaxed 2xl:leading-relaxed font-light`}>
               A lot of organizations spend a large amount of money and time simply maintaining old, legacy systems and products. 
               <br/><br/>
               This creates a development bottleneck which can delay and slow your processes, becoming it impossible to keep up with business demands.

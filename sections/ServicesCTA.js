@@ -6,17 +6,17 @@ import Title from '../atoms/Title'
 import TitleSpan from '../atoms/TitleSpan'
 
 const Wrapper = tw.div`px-5`
-const Container = tw.div`container mx-auto text-white py-32 relative` 
+const Container = tw.div`container mx-auto text-white pb-32 relative` 
 
 
 export default function ServicesCTA() {
   return (    
     <Wrapper>
-      <Container>        
-        <div css={tw`w-full flex justify-center items-start`}>
-          <div css={tw`w-5/12`}>
+      <Container className='container'>        
+        <div css={tw`w-full flex justify-between items-start`}>
+          <div css={tw`w-5/12 pr-12`}>
             <Title after={true} tag="h2">
-              Get the Maximum of Your IT<TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[9px] after:w-[21px] after:h-[12px]` }> Investment</TitleSpan>
+              Get the Maximum of Your IT {' '}<TitleSpan after="t" styles={tw`after:right-[-24px] after:bottom-[15px] after:w-[21px] after:h-[12px]` }>Investment</TitleSpan>
             </Title>
           </div>
           <div css={tw`w-6/12 -mt-3 `}>

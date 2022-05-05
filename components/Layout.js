@@ -53,7 +53,7 @@ export default function Layout({ children, dark }) {
         />
       </Head>
       <Wrapper dark={dark}>
-        <Container>
+        <Container className='container'>
           <Navigation>
             <Link href="/">
               <a css={[
@@ -85,7 +85,7 @@ export default function Layout({ children, dark }) {
       </Wrapper>
       <main>{children}</main>
       <Wrapper dark={true}>
-        <Container>
+        <Container className='container'>
           <div css={tw`flex justify-between py-16`}>
             <div css={tw`w-1/3 pr-2`}>
               <Link href="/">
@@ -93,7 +93,7 @@ export default function Layout({ children, dark }) {
                   <Logo />
                 </a>
               </Link>
-              <p css={tw`text-lg text-gray-500 mt-3 leading-relaxed font-light`}>div motion is a digital agency helping companies with agile development services and IT consulting. </p>
+              <p css={tw`2xl:text-lg text-gray-500 mt-3 leading-relaxed font-light`}>div motion is a digital agency helping companies with agile development services and IT consulting. </p>
               <Link href="/">
                 <a css={tw`flex text-gray-500/40 hover:text-gray-500/60 cursor-pointer mt-6`}>                
                   Privacy Policy
@@ -117,17 +117,7 @@ export default function Layout({ children, dark }) {
                 <p css={tw`text-gray-100 font-normal tracking-wide text-xl pb-4`}>Follow Us</p>
                 <div css={tw`flex`}>
                   <div css={tw`opacity-80 hover:opacity-100 transition-all  mr-3`}>
-                    <a href='https://www.linkedin.com/feed/' target="_blank" css={tw`text-blue-700`}>
-                      <IconLinkedin/>
-                    </a>
-                  </div>
-                  <div css={tw`opacity-80 hover:opacity-100 transition-all  mr-3`}>
-                    <a href='https://www.linkedin.com/feed/' target="_blank" css={tw`text-blue-700`}>
-                      <IconLinkedin/>
-                    </a>
-                  </div>
-                  <div css={tw`opacity-80 hover:opacity-100 transition-all  mr-3`}>
-                    <a href='https://www.linkedin.com/feed/' target="_blank" css={tw`text-blue-700`}>
+                    <a href='https://www.linkedin.com/company/divmotion/' target="_blank" css={tw`text-blue-700`}>
                       <IconLinkedin/>
                     </a>
                   </div>
@@ -135,7 +125,7 @@ export default function Layout({ children, dark }) {
               </div>
             </div>
           </div>
-        </Container>
+      </Container>
       </Wrapper>
     </div>
   )

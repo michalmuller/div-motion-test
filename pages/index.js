@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import tw, {styled} from 'twin.macro'
 
 //SECTIONS
 import HomeHero from '../sections/HomeHero'

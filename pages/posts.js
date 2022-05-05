@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import tw from 'twin.macro'
 import Layout from '../components/Layout'
+import Link from 'next/link'
 import Image from 'next/image'
-import { getSortedPostsData } from '../lib/posts'
+import { getAllPostIds, getSortedPostsData } from '../lib/posts'
 
 // Atoms, Components  & Sections
 import Title from '../atoms/Title'
@@ -36,19 +37,25 @@ export default function Posts({ allPostsData }) {
           </Title>
           {/* SPACE FOR THE FIRST/LATEST BLOG POST */}
           <div css={tw`mt-11 flex items-center`}>
-            <div css={tw`w-1/2 h-80 overflow-hidden`}>
+          <Link href={`/posts/${allPostsData[0].name}`}>
+            <div css={tw`w-1/2 h-80 overflow-hidden hover:cursor-pointer`}>
               <Image src={allPostsData[0].image} alt="todo" width="620px" height="340px" />
             </div>
+          </Link> 
             <div css={tw`w-1/2 text-blue-900 ml-12`}>
               <p css={tw`text-brand-turquoise uppercase font-bold pb-4`}>{allPostsData[0].label}</p>
-              <Title tag="h3">{allPostsData[0].title}</Title> 
-              <p css={tw`pt-5`}>lorem ipsum description amet</p>
+              <Link href={`/posts/${allPostsData[0].name}`}>
+                <div css={tw`hover:cursor-pointer`}>
+                  <Title tag="h3">{allPostsData[0].title}</Title>
+                </div>   
+              </Link>
+              <p css={tw`pt-5`}>{allPostsData[0].summary}</p>
             </div>
           </div>
           <div css={tw`grid grid-cols-3 gap-x-8 gap-y-24 w-full my-32`}>   
-            {allPostsData.slice(1).map(({ id, image, label, title }) => (
+            {allPostsData.slice(1).map(({ id, image, label, title, name }) => (
               <div key={id}>
-                <BlogPost id={id} image={image} label={label} title={title} />
+                <BlogPost id={id} image={image} label={label} title={title} name={name} />
               </div>
             ))}
           </div>

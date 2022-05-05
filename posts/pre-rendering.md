@@ -1,8 +1,13 @@
 ---
+id: 0
+name: "pre-rendering"
 image: "/images/legacy_api.png"
 label: "legacy api"
 title: "Two Forms of Pre-renderinge"
+summary: "Short Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 date: "2020-01-01"
+related:
+    - 2
 ---
 
 # This is a Heading 1 in a blog post
