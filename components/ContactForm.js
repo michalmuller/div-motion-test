@@ -5,57 +5,46 @@ import Link from 'next/link'
 // Atoms, Components  & Sections
 import Button from '../atoms/Button'
 
-const onSubmit = async (event, setSubmitText) => {
-  event.preventDefault();
-  setSubmitText("...");
-  const formElements = [...event.currentTarget.elements];
-  const isValid =
-    formElements.filter((elem) => elem.name === "bot-field")[0].value === "";
+export default function ContactForm() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
 
-  const validFormElements = isValid ? formElements : [];
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
-  if (validFormElements.length < 1) {
-    setSubmitText("It looks like you filled out too many fields!");
-  } else {
-    const filledOutElements = validFormElements
-      .filter((elem) => !!elem.value)
-      .map(
-        (element) =>
-          encodeURIComponent(element.name) +
-          "=" +
-          encodeURIComponent(element.value)
-      )
-      .join("&");
+  const handleSubmit = (event) =>{
+    event.preventDefault()
+    const details = {
+      Name: name,
+      Email: email,
+      Message: message,
+    }
 
-    await fetch("/", {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: filledOutElements,
-    })
-      .then(() => {
-        setSubmitText("Your message has been sent");
+      body: encode({ "form-name": "contact", ...details })
+    }).then(function () {
+        setName("")
+        setEmail("")
+        setMessage("")
       })
-      .catch((_) => {
-        setSubmitText(
-          "Something went wrong, please write us an email"
-        );
-      });
+      .catch(function (error) {
+        alert(error)
+      })
   }
-};
 
-export default function ContactForm() {
-  const [submitText, setSubmitText] = useState(null);
+  
   return ( 
-    <form name="contact" method="POST" data-netlify="true" onSubmit={e => onSubmit(e, setSubmitText)}>
-      <p style={{ display: "none" }}>
-        <label>
-          Don't fill this out if you expect to hear from us!
-          <input name="bot-field" value="" readOnly />
-        </label>
-      </p>
-      <input placeholder='Your full name' name="name" type="text" css={tw`bg-gray-50 w-full px-6 py-4 mb-5 placeholder:text-blue-900/40 text-blue-900`}></input>
-      <input placeholder='Your email address' name="email" type="email" css={tw`bg-gray-50 w-full px-6 py-4 mb-5 placeholder:text-blue-900/40 text-blue-900`}></input>
-      <textarea name="message" rows="7" placeholder='Tell us what you are looking for' css={tw`bg-gray-50 w-full px-6 py-4 placeholder:text-blue-900/40 text-blue-900`}></textarea>
+    <form name="contact" method="POST" data-netlify="true" onSubmit={e => handleSubmit(e)}>
+      <input type="hidden" name="form-name" value="contact" />
+      <input placeholder='Your full name' name="name" type="text" css={tw`bg-gray-50 w-full px-6 py-4 mb-5 placeholder:text-blue-900/40 text-blue-900`} onChange={(e) => setName(e.target.value)}></input>
+      <input placeholder='Your email address' name="email" type="email" css={tw`bg-gray-50 w-full px-6 py-4 mb-5 placeholder:text-blue-900/40 text-blue-900`} onChange={(e) => setEmail(e.target.value)}></input>
+      <textarea name="message" rows="7" placeholder='Tell us what you are looking for' css={tw`bg-gray-50 w-full px-6 py-4 placeholder:text-blue-900/40 text-blue-900`} onChange={(e) => setMessage(e.target.value)}></textarea>
       <div css={tw`flex items-start mt-2 leading-tight`}>
         <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" css={tw`w-6 h-6 bg-gray-50 border-gray-200 rounded-none -mt-0.5 mr-3`} />
         <label htmlFor="checkbox-1" css={tw`text-gray-700/70`}>
